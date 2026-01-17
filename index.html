@@ -145,5 +145,20 @@
                 <button type="button" class="button" onclick="location.href='https://mail.google.com'">Gmail</button>
                 <button type="button" class="button" onclick="location.href='jmp.html'">Juegos mas Pedidos</button>
             </div>
+            <audio id="audio" src="audio.mp3" preload="auto"></audio>
+
+  <script>
+    function iniciarAudio() {
+      const audio = document.getElementById("audio");
+      audio.play();
+
+      // Elimina los eventos después del primer toque
+      document.removeEventListener("click", iniciarAudio);
+      document.removeEventListener("touchstart", iniciarAudio);
+    }
+
+    document.addEventListener("click", iniciarAudio);
+    document.addEventListener("touchstart", iniciarAudio);
+  </script>
         </body>
     </html>
