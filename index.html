@@ -44,56 +44,13 @@
             display: block;
             margin: 0 auto;
         }
-
-        .cuadrouno {
-            color: white;
-            padding: 10px 15px;
-            display: inline-block;
-            border-radius: 6px;
-            background-color: rgba(0, 229, 255, 0.6);
-        }
-        .cuadrodos {
-            color: white;
-            padding: 10px 15px;
-            display: inline-block;
-            border-radius: 6px;
-            background-color: rgba(155, 92, 255, 0.6)
-        }
-        .cuadrotres {
-            color: white;
-            padding: 10px 15px;
-            display: inline-block;
-            border-radius: 6px;
-            background-color: rgba(255, 195, 0, 0.6);
-        }
-        .cuadrocuatro {
-            color: white;
-            padding: 10px 15px;
-            display: inline-block;
-            border-radius: 6px;
-            background-color: rgba(255, 60, 172, 0.6);
-        }
-        .cuadrocinco {
-            color: white;
-            padding: 10px 15px;
-            display: inline-block;
-            border-radius: 6px;
-            background-color: rgba(106, 0, 255, 0.6);
-        }
-        .cuadroseis {
-            color: white;
-            padding: 10px 15px;
-            display: inline-block;
-            border-radius: 6px;
-            background-color: rgba(255, 77, 77, 0.6);
-        }
-        .cuadrosiete {
-            color: white;
-            padding: 10px 15px;
-            display: inline-block;
-            border-radius: 6px;
-            background-color: rgba(255, 0, 128, 0.6);
-        }
+        .cuadrouno { color: white; padding: 10px 15px; display: inline-block; border-radius: 6px; background-color: rgba(0, 229, 255, 0.6); }
+        .cuadrodos { color: white; padding: 10px 15px; display: inline-block; border-radius: 6px; background-color: rgba(155, 92, 255, 0.6); }
+        .cuadrotres { color: white; padding: 10px 15px; display: inline-block; border-radius: 6px; background-color: rgba(255, 195, 0, 0.6); }
+        .cuadrocuatro { color: white; padding: 10px 15px; display: inline-block; border-radius: 6px; background-color: rgba(255, 60, 172, 0.6); }
+        .cuadrocinco { color: white; padding: 10px 15px; display: inline-block; border-radius: 6px; background-color: rgba(106, 0, 255, 0.6); }
+        .cuadroseis { color: white; padding: 10px 15px; display: inline-block; border-radius: 6px; background-color: rgba(255, 77, 77, 0.6); }
+        .cuadrosiete { color: white; padding: 10px 15px; display: inline-block; border-radius: 6px; background-color: rgba(255, 0, 128, 0.6); }
 
         /* --- SOLO AÑADIDO PARA LA CARGA --- */
         #loader {
@@ -102,7 +59,6 @@
             background: black;
             color: white;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
             z-index: 9999;
@@ -112,16 +68,14 @@
         }
     </style>
 </head>
-
 <body>
 
-<!-- PANTALLA DE CARGA (AÑADIDA) -->
+<!-- PANTALLA DE CARGA -->
 <div id="loader">
-    <p>Lorenzo's Sender</p>
-    <button class="button" onclick="iniciarCarga()">Iniciar</button>
+    <button class="button" onclick="iniciarCarga()">CARGANDO...</button>
 </div>
 
-<!-- CONTENIDO ORIGINAL (ENVUELTO) -->
+<!-- CONTENIDO ORIGINAL -->
 <div id="contenido">
 
     <div class="logos">
@@ -171,24 +125,15 @@
 
 </div>
 
-<!-- SCRIPTS ORIGINALES + LO NECESARIO -->
+<!-- SCRIPT SOLO PARA CARGA Y AUDIO -->
 <script>
-    function iniciarCarga() {
-        setTimeout(() => {
-            document.getElementById("loader").style.display = "none";
-            document.getElementById("contenido").style.display = "block";
-        }, 3000);
-    }
-
-    function iniciarAudio() {
-        const audio = document.getElementById("audio");
-        audio.play();
-        document.removeEventListener("click", iniciarAudio);
-        document.removeEventListener("touchstart", iniciarAudio);
-    }
-
-    document.addEventListener("click", iniciarAudio);
-    document.addEventListener("touchstart", iniciarAudio);
+function iniciarCarga() {
+    setTimeout(() => {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("contenido").style.display = "block";
+        document.getElementById("audio").play(); // audio solo cuando se vea la web
+    }, 3000);
+}
 </script>
 
 </body>
