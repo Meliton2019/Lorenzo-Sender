@@ -1,164 +1,166 @@
 <!DOCTYPE html>
-    <html>
-        <head>
-            <title>Lorenzo's Sender</title>
-            <link rel="icon" href="img/Logo Lorenzo/Gorilmoncat.png" type="image/png">
-            <style>
-                * {
-                    font-family: arial;
-                    color: black;
-                }
-                body {
-                    text-align: center;
-                    margin: 0;
-                    padding: 0;
-                    background-image: url("fondo.gif");
-                    background-size: cover;        /* Ajusta el gif a la pantalla */
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    background-attachment: fixed;  /* Opcional */
-                }
-                .button {
-                    min-width: 64px;
-                    border: none;
-                    margin-top: 6px;
-                    margin-bottom: 6px;
-                    height: 36px;
-                    border-radius: 4px;
-                    font-family: "Google Sans", Roboto, Arial, sans-serif;
-                    font-size: 15px;
-                    font-weight: 500;
-                    padding: 0 24px;
-                    box-sizing: border-box;
-                    background-color: rgb(26, 115, 232);
-                    color: #fff;
-                    cursor: pointer;
-                }
-                .logos {
-                display: flex;
-                justify-content: center; /* centra las imágenes */
-                gap: 10px;
-                margin-bottom: 15px;
-                }
-                .WTLS {
-                    display: block;
-                margin: 0 auto;
-                }
+<html>
+<head>
+    <title>Lorenzo's Sender</title>
+    <link rel="icon" href="img/Logo Lorenzo/Gorilmoncat.png" type="image/png">
+    <style>
+        * {
+            font-family: arial;
+            color: black;
+        }
 
-                .cuadrouno {
-                  color: white;              /* color del texto */
-                  padding: 10px 15px;        /* espacio interno */
-                  display: inline-block;     /* se adapta al texto */
-                  border-radius: 6px;        /* opcional */
-                  font-family: Arial, sans-serif;
-                  background-color: rgba(0, 229, 255, 0.6);
-    }
-                .cuadrodos {
-                  color: white;              /* color del texto */
-                  padding: 10px 15px;        /* espacio interno */
-                  display: inline-block;     /* se adapta al texto */
-                  border-radius: 6px;        /* opcional */
-                  font-family: Arial, sans-serif;
-                  background-color: rgba(155, 92, 255, 0.6)
-    }
-                .cuadrotres {
-                  color: white;              /* color del texto */
-                  padding: 10px 15px;        /* espacio interno */
-                  display: inline-block;     /* se adapta al texto */
-                  border-radius: 6px;        /* opcional */
-                  font-family: Arial, sans-serif;
-                  background-color: rgba(255, 195, 0, 0.6);
-    }
-                .cuadrocuatro {
-                  color: white;              /* color del texto */
-                  padding: 10px 15px;        /* espacio interno */
-                  display: inline-block;     /* se adapta al texto */
-                  border-radius: 6px;        /* opcional */
-                  font-family: Arial, sans-serif;
-                  background-color: rgba(255, 60, 172, 0.6);
-    }
-                .cuadrocinco {
-                  color: white;              /* color del texto */
-                  padding: 10px 15px;        /* espacio interno */
-                  display: inline-block;     /* se adapta al texto */
-                  border-radius: 6px;        /* opcional */
-                  font-family: Arial, sans-serif;
-                  background-color: rgba(106, 0, 255, 0.6);
-    }
-                .cuadroseis {
-                  color: white;              /* color del texto */
-                  padding: 10px 15px;        /* espacio interno */
-                  display: inline-block;     /* se adapta al texto */
-                  border-radius: 6px;        /* opcional */
-                  font-family: Arial, sans-serif;
-                  background-color: rgba(255, 77, 77, 0.6);
-    }
-                .cuadrosiete {
-                  color: white;              /* color del texto */
-                  padding: 10px 15px;        /* espacio interno */
-                  display: inline-block;     /* se adapta al texto */
-                  border-radius: 6px;        /* opcional */
-                  font-family: Arial, sans-serif;
-                  background-color: rgba(255, 0, 128, 0.6);
-    }
-            </style>
-        </head>
-        <body>
-         <div class="logos">
-                <img src="img/Logo Lorenzo/Gorilmoncat + logo gameoverdeluxe2.png" width="50"alt="logo">
-                <img src="img/Logo Lorenzo/Gameoverdeluxe2 logo blanco y rojo.png" width="150"alt="logo">
-            </div>
-            <img src="img/WTLS.png" class="WTLS" width="350"alt="LS">
-            
-            <div class="cuadrouno">
-                <p>Los Juegos se pueden pedir con DLCs si tienen (Si quiere el juego con DLCs se le mandara en un archivo.zip con archivo Lua y Manifest) (Algunos DLC no funcionan)</p>
-            </div>
-            
-            <div class="cuadrodos">
-                <p>Los Juegos se le mandara en un Setup.exe que te instalara en Juego Automaticamente</p>
-            </div>
-            
-            <div class="cuadrotres">
-                <p>Si el Juego que pida pesa mas que 2GB se le mandara en un archivo.zip, que dentro abrá un archivo.exe y varios archivos.bin, extraiga los archivos del zip en una carpeta y ejecute el archivo.exe</p>
-            </div>
-            
-            <div class="cuadrocuatro">
-                <p>Si el Juego que pida pesa mas que 2GB se le mandara en un archivo.zip, que dentro abrá un archivo.exe y varios archivos.bin, extraiga los archivos del zip en una carpeta y ejecute el archivo.exe</p>
-            </div>
-            
-            <div class="cuadrocinco">
-                <p>Si el juego requiere de Steam para ejecutarlo, se le mandara en un archivo.zip, que dentro abrá un archivo.lua y un archivo.manifest (La mayoria de las veces), para instalar el Juego necesita:
-            -Steam
-            -Steamtools
+        body {
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-image: url("fondo.gif");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        /* PANTALLA DE CARGA */
+        #cargando {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            z-index: 9999;
+        }
+
+        .button {
+            min-width: 64px;
+            border: none;
+            margin-top: 6px;
+            margin-bottom: 6px;
+            height: 36px;
+            border-radius: 4px;
+            font-family: "Google Sans", Roboto, Arial, sans-serif;
+            font-size: 15px;
+            font-weight: 500;
+            padding: 0 24px;
+            box-sizing: border-box;
+            background-color: rgb(26, 115, 232);
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .logos {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .WTLS {
+            display: block;
+            margin: 0 auto;
+        }
+
+        .cuadrouno, .cuadrodos, .cuadrotres, .cuadrocuatro,
+        .cuadrocinco, .cuadroseis, .cuadrosiete {
+            color: white;
+            padding: 10px 15px;
+            display: inline-block;
+            border-radius: 6px;
+            font-family: Arial, sans-serif;
+            margin-bottom: 10px;
+        }
+
+        .cuadrouno { background-color: rgba(0, 229, 255, 0.6); }
+        .cuadrodos { background-color: rgba(155, 92, 255, 0.6); }
+        .cuadrotres { background-color: rgba(255, 195, 0, 0.6); }
+        .cuadrocuatro { background-color: rgba(255, 60, 172, 0.6); }
+        .cuadrocinco { background-color: rgba(106, 0, 255, 0.6); }
+        .cuadroseis { background-color: rgba(255, 77, 77, 0.6); }
+        .cuadrosiete { background-color: rgba(255, 0, 128, 0.6); }
+    </style>
+</head>
+
+<body>
+
+    <!-- PANTALLA DE CARGA -->
+    <div id="cargando">
+        Cargando...
+    </div>
+
+    <!-- CONTENIDO DE LA WEB -->
+    <div id="web" style="display:none;">
+
+        <div class="logos">
+            <img src="img/Logo Lorenzo/Gorilmoncat + logo gameoverdeluxe2.png" width="50" alt="logo">
+            <img src="img/Logo Lorenzo/Gameoverdeluxe2 logo blanco y rojo.png" width="150" alt="logo">
+        </div>
+
+        <img src="img/WTLS.png" class="WTLS" width="350" alt="LS">
+
+        <div class="cuadrouno">
+            <p>Los Juegos se pueden pedir con DLCs si tienen (Si quiere el juego con DLCs se le mandara en un archivo.zip con archivo Lua y Manifest) (Algunos DLC no funcionan)</p>
+        </div>
+
+        <div class="cuadrodos">
+            <p>Los Juegos se le mandara en un Setup.exe que te instalara en Juego Automaticamente</p>
+        </div>
+
+        <div class="cuadrotres">
+            <p>Si el Juego que pida pesa mas que 2GB se le mandara en un archivo.zip, que dentro abrá un archivo.exe y varios archivos.bin, extraiga los archivos del zip en una carpeta y ejecute el archivo.exe</p>
+        </div>
+
+        <div class="cuadrocuatro">
+            <p>Si el Juego que pida pesa mas que 2GB se le mandara en un archivo.zip, que dentro abrá un archivo.exe y varios archivos.bin, extraiga los archivos del zip en una carpeta y ejecute el archivo.exe</p>
+        </div>
+
+        <div class="cuadrocinco">
+            <p>Si el juego requiere de Steam para ejecutarlo, se le mandara en un archivo.zip, que dentro abrá un archivo.lua y un archivo.manifest (La mayoria de las veces), para instalar el Juego necesita:
+            <br>-Steam<br>-Steamtools<br>
             una vez que tenga las aplicaciones necesarias para instalar el juego, extraiga los archivos del zip en una carpeta y arrastre los archivos que estan dentro de la carpeta a la ventana de Steamtools, reinicie Steam y Listo</p>
-            </div>
-            
-            <div class="cuadroseis">
-                <p>Los Juegos se pueden pedir en formato Lua y Manifest o un setup para instalar el Juego</p>
-            </div>
-            
-            <div class="cuadrosiete">
-                <p>Para pedir Juego, Pelicula, etc... Escriba al: meliton2019sender@gmail.com</p>
-            </div>
-            
-            <div class="butons">
-                <button type="button" class="button" onclick="location.href='https://mail.google.com'">Gmail</button>
-                <button type="button" class="button" onclick="location.href='jmp.html'">Juegos mas Pedidos</button>
-            </div>
-            <audio id="audio" src="audio.mp3" preload="auto"></audio>
+        </div>
 
-  <script>
-    function iniciarAudio() {
-      const audio = document.getElementById("audio");
-      audio.play();
+        <div class="cuadroseis">
+            <p>Los Juegos se pueden pedir en formato Lua y Manifest o un setup para instalar el Juego</p>
+        </div>
 
-      // Elimina los eventos después del primer toque
-      document.removeEventListener("click", iniciarAudio);
-      document.removeEventListener("touchstart", iniciarAudio);
-    }
+        <div class="cuadrosiete">
+            <p>Para pedir Juego, Pelicula, etc... Escriba al: meliton2019sender@gmail.com</p>
+        </div>
 
-    document.addEventListener("click", iniciarAudio);
-    document.addEventListener("touchstart", iniciarAudio);
-  </script>
-        </body>
-    </html>
+        <div class="butons">
+            <button type="button" class="button" onclick="location.href='https://mail.google.com'">Gmail</button>
+            <button type="button" class="button" onclick="location.href='jmp.html'">Juegos mas Pedidos</button>
+        </div>
+
+        <audio id="audio" src="audio.mp3" preload="auto"></audio>
+
+    </div>
+
+    <!-- AUDIO -->
+    <script>
+        function iniciarAudio() {
+            const audio = document.getElementById("audio");
+            audio.play();
+            document.removeEventListener("click", iniciarAudio);
+            document.removeEventListener("touchstart", iniciarAudio);
+        }
+
+        document.addEventListener("click", iniciarAudio);
+        document.addEventListener("touchstart", iniciarAudio);
+    </script>
+
+    <!-- OCULTAR CARGA -->
+    <script>
+        window.onload = function () {
+            document.getElementById("cargando").style.display = "none";
+            document.getElementById("web").style.display = "block";
+        };
+    </script>
+
+</body>
+</html>
