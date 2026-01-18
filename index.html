@@ -52,12 +52,10 @@
         .cuadroseis { color: white; padding: 10px 15px; display: inline-block; border-radius: 6px; background-color: rgba(255, 77, 77, 0.6); }
         .cuadrosiete { color: white; padding: 10px 15px; display: inline-block; border-radius: 6px; background-color: rgba(255, 0, 128, 0.6); }
 
-        /* --- SOLO AÑADIDO PARA LA CARGA --- */
         #loader {
             position: fixed;
             inset: 0;
             background: black;
-            color: white;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -70,12 +68,16 @@
 </head>
 <body>
 
-<!-- PANTALLA DE CARGA CON IMAGEN -->
+<!-- PANTALLA DE CARGA -->
 <div id="loader">
-    <img src="img/cargando.png" alt="Cargando..." style="cursor:pointer;" onclick="iniciarCarga()">
+    <img id="loaderImg"
+         src="img/Logo Lorenzo/Gorilmoncat.png"
+         alt="Logo"
+         style="cursor:pointer;"
+         onclick="iniciarCarga()">
 </div>
 
-<!-- CONTENIDO ORIGINAL -->
+<!-- CONTENIDO -->
 <div id="contenido">
 
     <div class="logos">
@@ -102,10 +104,12 @@
     </div>
 
     <div class="cuadrocinco">
-        <p>Si el juego requiere de Steam para ejecutarlo, se le mandara en un archivo.zip, que dentro abrá un archivo.lua y un archivo.manifest (La mayoria de las veces), para instalar el Juego necesita:
-        -Steam
-        -Steamtools
-        una vez que tenga las aplicaciones necesarias para instalar el juego, extraiga los archivos del zip en una carpeta y arrastre los archivos que estan dentro de la carpeta a la ventana de Steamtools, reinicie Steam y Listo</p>
+        <p>
+            Si el juego requiere de Steam para ejecutarlo, se le mandara en un archivo.zip, que dentro abrá un archivo.lua y un archivo.manifest (La mayoria de las veces), para instalar el Juego necesita:<br>
+            - Steam<br>
+            - Steamtools<br>
+            una vez que tenga las aplicaciones necesarias para instalar el juego, extraiga los archivos del zip en una carpeta y arrastre los archivos que estan dentro de la carpeta a la ventana de Steamtools, reinicie Steam y Listo
+        </p>
     </div>
 
     <div class="cuadroseis">
@@ -125,16 +129,23 @@
 
 </div>
 
-<!-- SCRIPT SOLO PARA CARGA Y AUDIO -->
 <script>
 function iniciarCarga() {
+    const img = document.getElementById("loaderImg");
+
+    // Cambia el logo por la imagen "cargando.png"
+    img.src = "img/cargando.png";
+    img.style.cursor = "default";
+    img.onclick = null;
+
     setTimeout(() => {
         document.getElementById("loader").style.display = "none";
         document.getElementById("contenido").style.display = "block";
-        document.getElementById("audio").play(); // audio solo cuando se vea la web
+        document.getElementById("audio").play();
     }, 3000);
 }
 </script>
 
 </body>
 </html>
+
