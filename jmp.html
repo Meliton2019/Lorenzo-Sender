@@ -1,47 +1,82 @@
 <!DOCTYPE html>
-    <html>
-        <head>
-            <title>Juegos mas Pedidos</title>
-            <link rel="icon" href="img/Logo Lorenzo/Gorilmoncat.png" type="image/png">
-            <style>
-                * {
-                    font-family: arial;
-                }
-                body {
-                    text-align: center;
-                }
-                .button {
-                    min-width: 64px;
-                    border: none;
-                    margin-top: 6px;
-                    margin-bottom: 6px;
-                    height: 36px;
-                    border-radius: 4px;
-                    font-family: "Google Sans", Roboto, Arial, sans-serif;
-                    font-size: 15px;
-                    font-weight: 500;
-                    padding: 0 24px;
-                    box-sizing: border-box;
-                    background-color: rgb(26, 115, 232);
-                    color: #fff;
-                    cursor: pointer;
-                }
-                .logos {
-                display: flex;
-                justify-content: center; /* centra las imágenes */
-                gap: 10px;
-                margin-bottom: 15px;
-                }
-            </style>
-        </head>
-        <body>
-            <div class="logos">
-                <img src="img/Logo Lorenzo/Gorilmoncat + logo gameoverdeluxe2.png" width="50"alt="logo">
-                <img src="img/Logo Lorenzo/Gameoverdeluxe2 logo blanco y rojo.png" width="150"alt="logo">
-            </div>
-            <h1>Juegos mas Pedidos:</h1>
-            <p>1º Grand Theft Auto 5</p>
-            <p>2º Cyberpunk 2077</p>
-            <p>3º Five Nights at Freddy's Security Breach + Ruin</p>
-        </body>
-    </html>
+<html>
+<head>
+    <title>Juegos mas Pedidos</title>
+    <link rel="icon" href="img/Logo Lorenzo/Gorilmoncat.png" type="image/png">
+    <style>
+        * {
+            font-family: arial;
+            color: black;
+        }
+        body {
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-image: url("fondo.gif");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .button {
+            min-width: 64px;
+            border: none;
+            margin-top: 6px;
+            margin-bottom: 6px;
+            height: 36px;
+            border-radius: 4px;
+            font-family: "Google Sans", Roboto, Arial, sans-serif;
+            font-size: 15px;
+            font-weight: 500;
+            padding: 0 24px;
+            box-sizing: border-box;
+            background-color: rgb(26, 115, 232);
+            color: #fff;
+            cursor: pointer;
+        }
+        .logos {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        . {
+            display: block;
+            margin: 0 auto;
+        }
+        .cuadrouno { color: white; padding: 10px 15px; display: inline-block; border-radius: 6px; background-color: rgba(0, 229, 255, 0.6); }
+        .cuadrodos { color: white; padding: 10px 15px; display: inline-block; border-radius: 6px; background-color: rgba(155, 92, 255, 0.6); }
+        .cuadrotres { color: white; padding: 10px 15px; display: inline-block; border-radius: 6px; background-color: rgba(255, 195, 0, 0.6); }
+        
+    </style>
+</head>
+<body>
+
+
+    <div class="logos">
+        <img src="img/Logo Lorenzo/Gorilmoncat + logo gameoverdeluxe2.png" width="50" alt="logo">
+        <img src="img/Logo Lorenzo/Gameoverdeluxe2 logo blanco y rojo.png" width="150" alt="logo">
+    </div>
+
+    <img src="img/.png" class="" width="350" alt="LS">
+
+    <div class="cuadrouno">
+        <p>1º Grand Theft Auto 5</p>
+    </div>
+
+    <div class="cuadrodos">
+        <p>2º Cyberpunk 2077</p>
+    </div>
+
+    <div class="cuadrotres">
+        <p>3º Five Nights at Freddy's Security Breach + Ruin DLC</p>
+    </div>
+    
+
+    <div class="butons">
+        <button type="button" class="button" onclick="location.href='index.html'">Volver</button>
+    </div>
+
+
+</body>
+</html>
