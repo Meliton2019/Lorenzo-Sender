@@ -9,14 +9,17 @@
             color: black;
         }
         body {
-            text-align: center;
-            margin: 0;
-            padding: 0;
-            background-image: url("nav.gif");
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-attachment: fixed;
+          body {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-image: url("nav.gif");
+    background-size: cover; /* Cubre toda la pantalla */
+    background-repeat: no-repeat;
+    background-position: center center; /* Centra el GIF */
+    background-attachment: fixed; /* Evita que el fondo se mueva al bajar */
+    min-height: 100vh; /* Asegura que el body mida al menos el alto de la pantalla */
+}
         }
         .button {
             min-width: 64px;
