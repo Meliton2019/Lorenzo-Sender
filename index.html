@@ -1,154 +1,158 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Lorenzo's Sender</title>
-    <link rel="icon" href="img/Logo Lorenzo/Gorilmoncat.png" type="image/png">
-    <style>
-        * {
-            font-family: Arial, sans-serif;
-            /* Se eliminó color: black de aquí para que funcionen los colores de los cuadros */
-        }
-        body {
-            text-align: center;
-            margin: 0;
-            padding: 0;
-            background-image: url("fondo.gif");
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-attachment: fixed;
-            background-color: #1a1a1a; /* Color de respaldo */
-        }
-        .button {
-            min-width: 64px;
-            border: none;
-            margin-top: 6px;
-            margin-bottom: 6px;
-            height: 36px;
-            border-radius: 4px;
-            font-family: "Google Sans", Roboto, Arial, sans-serif;
-            font-size: 15px;
-            font-weight: 500;
-            padding: 0 24px;
-            box-sizing: border-box;
-            background-color: rgb(26, 115, 232);
-            color: #fff;
-            cursor: pointer;
-        }
-        .logos {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 20px;
-            margin-bottom: 15px;
-        }
-        .WTLS {
-            display: block;
-            margin: 0 auto;
-        }
-        /* Clases de cuadros con color de texto forzado a blanco */
-        .cuadrouno, .cuadrodos, .cuadrotres, .cuadrocuatro, .cuadrocinco, .cuadroseis, .cuadrosiete {
-            color: white; 
-            padding: 10px 15px; 
-            display: inline-block; 
-            border-radius: 6px; 
-            margin: 5px;
-            max-width: 80%;
-        }
-        .cuadrouno { background-color: rgba(0, 229, 255, 0.6); }
-        .cuadrodos { background-color: rgba(155, 92, 255, 0.6); }
-        .cuadrotres { background-color: rgba(255, 195, 0, 0.6); }
-        .cuadrocuatro { background-color: rgba(255, 60, 172, 0.6); }
-        .cuadrocinco { background-color: rgba(106, 0, 255, 0.6); }
-        .cuadroseis { background-color: rgba(255, 77, 77, 0.6); }
-        .cuadrosiete { background-color: rgba(255, 0, 128, 0.6); }
+    <title>Lorenzo's Sender</title>
+    <link rel="icon" href="img/Logo Lorenzo/Gorilmoncat.png" type="image/png">
+    <style>
+        * {
+            font-family: arial;
+            color: black;
+        }
+        body {
+             text-align: center;
 
-        #loader {
-            position: fixed;
-            inset: 0;
-            background: black;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-            cursor: pointer;
-        }
-        #contenido {
-            display: none;
-        }
-    </style>
+         margin: 0;
+
+            padding: 0;
+
+            background-image: url("fondo.gif");
+
+            background-size: cover;
+
+            background-repeat: no-repeat;
+
+            background-position: center;
+
+            background-attachment: fixed;
+}
+        .button {
+            min-width: 64px;
+            border: none;
+            margin-top: 6px;
+            margin-bottom: 6px;
+            height: 36px;
+            border-radius: 4px;
+            font-family: "Google Sans", Roboto, Arial, sans-serif;
+            font-size: 15px;
+            font-weight: 500;
+            padding: 0 24px;
+            box-sizing: border-box;
+            background-color: rgb(26, 115, 232);
+            color: #fff;
+            cursor: pointer;
+        }
+        .logos {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        .WTLS {
+            display: block;
+            margin: 0 auto;
+        }
+        .cuadrouno { color: white; padding: 10px 15px; display: inline-block; border-radius: 6px; background-color: rgba(0, 229, 255, 0.6); }
+        .cuadrodos { color: white; padding: 10px 15px; display: inline-block; border-radius: 6px; background-color: rgba(155, 92, 255, 0.6); }
+        .cuadrotres { color: white; padding: 10px 15px; display: inline-block; border-radius: 6px; background-color: rgba(255, 195, 0, 0.6); }
+        .cuadrocuatro { color: white; padding: 10px 15px; display: inline-block; border-radius: 6px; background-color: rgba(255, 60, 172, 0.6); }
+        .cuadrocinco { color: white; padding: 10px 15px; display: inline-block; border-radius: 6px; background-color: rgba(106, 0, 255, 0.6); }
+        .cuadroseis { color: white; padding: 10px 15px; display: inline-block; border-radius: 6px; background-color: rgba(255, 77, 77, 0.6); }
+        .cuadrosiete { color: white; padding: 10px 15px; display: inline-block; border-radius: 6px; background-color: rgba(255, 0, 128, 0.6); }
+
+        #loader {
+            position: fixed;
+            inset: 0;
+            background: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            cursor: pointer;
+        }
+        #contenido {
+            display: none;
+        }
+    </style>
 </head>
 <body>
 
+<!-- PANTALLA DE CARGA (CLICK EN CUALQUIER PARTE) -->
 <div id="loader" onclick="iniciarCarga()">
-    <img id="loaderImg"
-         src="img/LS.png"
-         alt="Logo"
-         style="width:500px; height:auto;">
+    <img id="loaderImg"
+         src="img/LS.png"
+         alt="Logo"
+         style="width:500px; height:auto;">
 </div>
 
+<!-- CONTENIDO -->
 <div id="contenido">
 
-    <div class="logos">
-        <img src="img/Logo Lorenzo/Gorilmoncat + logo gameoverdeluxe2.png" width="50" alt="logo">
-        <img src="img/Logo Lorenzo/Gameoverdeluxe2 logo blanco y rojo.png" width="150" alt="logo">
-    </div>
+    <div class="logos">
+        <img src="img/Logo Lorenzo/Gorilmoncat + logo gameoverdeluxe2.png" width="50" alt="logo">
+        <img src="img/Logo Lorenzo/Gameoverdeluxe2 logo blanco y rojo.png" width="150" alt="logo">
+    </div>
 
-    <img src="img/WTLS.png" class="WTLS" width="350" alt="LS">
+    <img src="img/WTLS.png" class="WTLS" width="350" alt="LS">
 
-    <div class="cuadrouno"><p>Los Juegos se pueden pedir con DLCs si tienen (Si quiere el juego con DLCs se le mandara en un archivo.zip con archivo Lua y Manifest) (Algunos DLC no funcionan)</p></div>
-    <div class="cuadrodos"><p>Los Juegos se le mandara en un Setup.exe que te instalara en Juego Automaticamente</p></div>
-    <div class="cuadrotres"><p>Si el Juego que pida pesa mas que 2GB se le mandara en un archivo.zip, que dentro abrá un archivo.exe y varios archivos.bin, extraiga los archivos del zip en una carpeta y ejecute el archivo.exe</p></div>
-    <div class="cuadrocuatro"><p>Si el Juego que pida pesa mas que 2GB se le mandara en un archivo.zip, que dentro abrá un archivo.exe y varios archivos.bin, extraiga los archivos del zip en una carpeta y ejecute el archivo.exe</p></div>
-    <div class="cuadrocinco">
-        <p>
-            Si el juego requiere de Steam para ejecutarlo, se le mandara en un archivo.zip, que dentro abrá un archivo.lua y un archivo.manifest (La mayoria de las veces), para instalar el Juego necesita:<br>
-            - Steam | - Steamtools<br>
-            una vez que tenga las aplicaciones necesarias, extraiga los archivos y arrástrelos a la ventana de Steamtools, reinicie Steam y Listo
-        </p>
-    </div>
-    <div class="cuadroseis"><p>Los Juegos se pueden pedir en formato Lua y Manifest o un setup para instalar el Juego</p></div>
-    <div class="cuadrosiete"><p>Para pedir Juego, Pelicula, etc... Escriba al: meliton2019sender@gmail.com</p></div>
+    <div class="cuadrouno">
+        <p>Los Juegos se pueden pedir con DLCs si tienen (Si quiere el juego con DLCs se le mandara en un archivo.zip con archivo Lua y Manifest) (Algunos DLC no funcionan)</p>
+    </div>
 
-    <div class="butons">
-        <button type="button" class="button" onclick="location.href='https://mail.google.com'">Gmail</button>
-        <button type="button" class="button" onclick="location.href='jmp.html'">Juegos mas Pedidos</button>
-    </div>
+    <div class="cuadrodos">
+        <p>Los Juegos se le mandara en un Setup.exe que te instalara en Juego Automaticamente</p>
+    </div>
 
-    <audio id="audio" src="audio.mp3" preload="auto"></audio>
-    <audio id="fondo" src="fondo.mp3" preload="auto" loop></audio>
+    <div class="cuadrotres">
+        <p>Si el Juego que pida pesa mas que 2GB se le mandara en un archivo.zip, que dentro abrá un archivo.exe y varios archivos.bin, extraiga los archivos del zip en una carpeta y ejecute el archivo.exe</p>
+    </div>
+
+    <div class="cuadrocuatro">
+        <p>Si el Juego que pida pesa mas que 2GB se le mandara en un archivo.zip, que dentro abrá un archivo.exe y varios archivos.bin, extraiga los archivos del zip en una carpeta y ejecute el archivo.exe</p>
+    </div>
+
+    <div class="cuadrocinco">
+        <p>
+            Si el juego requiere de Steam para ejecutarlo, se le mandara en un archivo.zip, que dentro abrá un archivo.lua y un archivo.manifest (La mayoria de las veces), para instalar el Juego necesita:<br>
+            - Steam<br>
+            - Steamtools<br>
+            una vez que tenga las aplicaciones necesarias para instalar el juego, extraiga los archivos del zip en una carpeta y arrastre los archivos que estan dentro de la carpeta a la ventana de Steamtools, reinicie Steam y Listo
+        </p>
+    </div>
+
+    <div class="cuadroseis">
+        <p>Los Juegos se pueden pedir en formato Lua y Manifest o un setup para instalar el Juego</p>
+    </div>
+
+    <div class="cuadrosiete">
+        <p>Para pedir Juego, Pelicula, etc... Escriba al: meliton2019sender@gmail.com</p>
+    </div>
+
+    <div class="butons">
+        <button type="button" class="button" onclick="location.href='https://mail.google.com'">Gmail</button>
+        <button type="button" class="button" onclick="location.href='jmp.html'">Juegos mas Pedidos</button>
+    </div>
+
+    <audio id="audio" src="audio.mp3" preload="auto"></audio>
 
 </div>
 
 <script>
 function iniciarCarga() {
-    const loader = document.getElementById("loader");
-    const img = document.getElementById("loaderImg");
-    const audioEfecto = document.getElementById("audio");
-    const audioFondo = document.getElementById("fondo");
+    const loader = document.getElementById("loader");
+    const img = document.getElementById("loaderImg");
 
-    // 1. Desbloquear el audio inmediatamente al hacer clic
-    // Esto es vital para que el navegador de permiso de sonido
-    audioFondo.volume = 0.4; 
-    audioFondo.play().catch(e => console.log("Esperando interacción para audio"));
+    loader.onclick = null; // evita múltiples clics
+    loader.style.cursor = "default";
 
-    loader.onclick = null; 
-    loader.style.cursor = "default";
-    img.src = "img/cargando.png";
+    img.src = "img/cargando.png";
 
-    setTimeout(() => {
-        loader.style.display = "none";
-        document.getElementById("contenido").style.display = "block";
-        
-        // Reproducir el efecto de sonido de entrada
-        audioEfecto.play().catch(e => console.log("Efecto bloqueado"));
-        
-        // Asegurarse de que el fondo siga sonando
-        audioFondo.play();
-    }, 3000);
+    setTimeout(() => {
+        loader.style.display = "none";
+        document.getElementById("contenido").style.display = "block";
+        document.getElementById("audio").play();
+    }, 3000);
 }
 </script>
 
 </body>
-</html>
+</html> no se escucha el audio fondo
