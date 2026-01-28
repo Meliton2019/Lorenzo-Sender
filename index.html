@@ -133,7 +133,7 @@
     </div>
 
     <audio id="audio" src="audio.mp3" preload="auto"></audio>
-    <audio id="audio" src="fondo.mp3" preload="auto" loop></audio>
+    <audio id="fondo" src="fondo.mp3" preload="auto" loop></audio>
 
 </div>
 
@@ -151,6 +151,7 @@ function iniciarCarga() {
         loader.style.display = "none";
         document.getElementById("contenido").style.display = "block";
         document.getElementById("audio").play();
+        document.getElementById("fondo").play();
     }, 3000);
 }
 </script>
